@@ -1,0 +1,13 @@
+service: example
+
+provider:
+  name: aws
+  endpointType: REGIONAL
+  runtime: nodejs8.10
+  region: us-east-2
+
+functions:
+  index:
+    handler: handler.hello
+    events:
+      - http: GET hello
